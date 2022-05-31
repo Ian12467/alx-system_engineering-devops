@@ -21,8 +21,15 @@ File 9-divide_and_rule is a script that prints the result of POWER divided by DI
 File 10-love_exponent_breath is a script that displays the result of BREATH to the power LOVE.
 
 File 11-binary_to_decimal is a script that converts a number from base 2 to base 10
+
 File 12-combinations is a script that prints all possible combinations of two letters, except oo.
 
 File 13-print_float is a script that prints a number with two decimal places.
 
 File 14-decimal_to_hexadecimal is a script that converts a number from base 10 to base 16.
+
+File 100-rot13 is a script that encodes and decodes text using the rot13 encryption.
+
+File 101-odd is a script that prints every other line from the input, starting with the first line.
+
+File 102-water_and_stir is a shell script that adds the two numbers stored in the environment variables WATER and STIR and prints the result.
