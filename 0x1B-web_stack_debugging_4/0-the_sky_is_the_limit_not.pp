@@ -1,9 +1,12 @@
-# Puppet
-exec { 'fixer':
-    command => 'sed -i s/15/1024 /etc/default/nginx',
-    path    => '/bin',
+# Fix problem of high amount of requests
+
+exec {'replace':
+  provider => shell,
+  command  => 'sudo sed -i "s/ULIMIT=\"-n 15\"/ULIMIT=\"-n 4096\"/" /etc/default/nginx',
+  before   => Exec['restart'],
 }
-service { 'nginx':
-    ensure    => running,
-    subscribe => Exec['fixer'],
+
+exec {'restart':
+  provider => shell,
+  command  => 'sudo service nginx restart',
 }
